@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>My Times</title>
+  <link rel="icon" href="cookie1.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+  <link rel="stylesheet" href="./resources/css/reset.css">
   <link rel="stylesheet" href="./resources/css/style.css" type="text/css" />
 </head>
 <body>
@@ -14,7 +19,7 @@
       <span>My Times</span>
     </div>
     <nav>
-    	<span><a href="#">World</a></span>
+    	<span><a href="https://youtube.com" target="_blank">World</a></span>
     	<span><a href="#">U.S.</a></span>
     	<span><a href="#">Tech</a></span>
     	<span><a href="#">Science</a></span>
@@ -33,7 +38,7 @@
           <span>Mother of Three Buys Tuna Steak at Phish Concert. Leaves,
              "Feeling Funny."</span>
         </div>
-        <p class="narrative">
+        <p class="narrative animated zoomIn">
           MONUMENT VALLEY, AZ - Lorem ipsum dolor sit amet, consectetur
           adipiscing elit. Pellentesque nec nisl at augue dapibus dignissim.
           Nunc condimentum rutrum metus, ac eleifend lacus viverra nec. Proin
@@ -138,15 +143,36 @@
     <div class="info">
       <span class="title">MY Times</span>
       <nav>
-        <span><a href="#">World</a></span>
+        <span><a href="https://youtube.com" target="_blank">World</a></span>
         <span><a href="#">U.S.</a></span>
         <span><a href="#">Tech</a></span>
         <span><a href="#">Science</a></span>
       </nav>
     </div>
     <div class="copyright">
-      © 2016, My Times (A Division of Codecademy bite)
+      © 2018  My Times
     </div>
   </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <script type="text/javascript">
+
+   $(document).ready(function(){
+     $(window).scroll(function(event){
+       var positiontop = $(document).scrollTop();
+       console.log(positiontop);
+
+
+       if((positiontop > 50) && (positiontop < 280)){
+         $('.narrative').addClass('animated zoomIn');
+         $('.narrative').css('visibility', 'visible');
+       }
+
+     });
+   });
+   </script>
+
 </body>
 </html>

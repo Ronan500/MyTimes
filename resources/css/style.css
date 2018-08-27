@@ -21,6 +21,10 @@ h2 {
 nav span {
   display: inline-block;
   padding: 20px 10px;
+
+}
+span a {
+  text-decoration: none;
 }
 
 /* Universal Styles - News Stories */
@@ -43,6 +47,7 @@ nav span {
 
 .narrative {
   margin-top: 16px;
+  visibility: hidden;
 }
 
 .image-content {
